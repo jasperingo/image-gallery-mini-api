@@ -1,0 +1,99 @@
+<?php
+
+namespace imagegallery\utils;
+
+
+class Response {
+
+
+	//1×× Informational
+	const RC_CONTINUE = 100;
+	const RC_SWITCHING_PROTOCOLS = 101;
+	const RC_PROCESSING = 102;
+	
+	//2×× Success
+	const RC_OK = 200;
+	const RC_CREATED = 201;
+	const RC_ACCEPTED = 202;
+	const RC_NON_AUTHORITATIVE_INFORMATION = 203;
+	const RC_NO_CONTENT = 204;
+	const RC_RESET_CONTENT = 205;
+	const RC_PARTIAL_CONTENT = 206;
+	const RC_MULTI_STATUS = 207;
+	const RC_ALREADY_REPORTED = 208;
+	const RC_IM_USED = 226;
+	
+	//3×× Redirection
+	const RC_MULTIPLE_CHOICES = 300;
+	const RC_MOVED_PERMANENTLY = 301;
+	const RC_FOUND = 302;
+	const RC_SEE_OTHER = 303;
+	const RC_NOT_MODIFIED = 304;
+	const RC_USE_PROXY = 305;
+	const RC_TEMPORARY_REDIRECT = 307;
+	const RC_PERMANENT_REDIRECT = 308;
+	
+	//4×× Client Error
+	const RC_BAD_REQUEST = 400;
+	const RC_UNAUTHORIZED = 401;
+	const RC_PAYMENT_REQUIRED = 402;
+	const RC_FORBIDDEN = 403;
+	const RC_NOT_FOUND = 404;
+	const RC_METHOD_NOT_ALLOWED = 405;
+	const RC_NOT_ACCEPTABLE = 406;
+	const RC_PROXY_AUTHENTICATION_REQUIRED = 407;
+	const RC_REQUEST_TIMEOUT = 408;
+	const RC_CONFLICT = 409;
+	const RC_GONE = 410;
+	const RC_LENGTH_REQUIRED = 411;
+	const RC_PRECONDITION_FAILED = 412;
+	const RC_PAYLOAD_TOO_LARGE = 413;
+	const RC_REQUEST_URI_TOO_LONG = 414;
+	const RC_UNSUPPORTED_MEDIA_TYPE = 415;
+	const RC_REQUESTED_RANGE_NOT_SATISFIABLE = 416;
+	const RC_EXPECTATION_FAILED = 417;
+	const RC_I_M_A_TEAPOT = 418;
+	const RC_MISDIRECTED_REQUEST = 421;
+	const RC_UNPROCESSABLE_ENTITY = 422;
+	const RC_LOCKED = 423;
+	const RC_FAILED_DEPENDENCY = 424;
+	const RC_UPGRADE_REQUIRED = 426;
+	const RC_PRECONDITION_REQUIRED = 428;
+	const RC_TOO_MANY_REQUESTS = 429;
+	const RC_REQUEST_HEADER_FIELDS_TOO_LARGE = 431;
+	const RC_CONNECTION_CLOSED_WITHOUT_RESPONSE = 444;
+	const RC_UNAVAILABLE_FOR_LEGAL_REASONS = 451;
+	const RC_CLIENT_CLOSED_REQUEST = 499;
+	
+	//5×× Server Error
+	const RC_INTERNAL_SERVER_ERROR = 500;
+	const RC_NOT_IMPLEMENTED = 501;
+	const RC_BAD_GATEWAY = 502;
+	const RC_SERVICE_UNAVAILABLE = 503;
+	const RC_GATEWAY_TIMEOUT = 504;
+	const RC_HTTP_VERSION_NOT_SUPPORTED = 505;
+	const RC_VARIANT_ALSO_NEGOTIATES = 506;
+	const RC_INSUFFICIENT_STORAGE = 507;
+	const RC_LOOP_DETECTED = 508;
+	const RC_NOT_EXTENDED = 510;
+	const RC_NETWORK_AUTHENTICATION_REQUIRED = 511;
+	const RC_NETWORK_CONNECT_TIMEOUT_ERROR = 599;
+
+
+	public $code;
+
+	public $entity;
+
+	public function __construct(int $code, ?ResponseEntity $entity = null) {
+		$this->code = $code;
+		$this->entity = $entity;
+	}
+	
+}
+
+
+
+
+
+
+

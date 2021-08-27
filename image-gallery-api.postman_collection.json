@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "589a5fc9-69bf-4777-a3b1-8f457dbf8c92",
+		"name": "image-gallery-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"Weather Photo\",\r\n    \"url\" : \"http://www.pixworld.com/i/324sr3\",\r\n    \"size\" : 30400,\r\n    \"width\" : 500,\r\n    \"height\" : 800,\r\n    \"tags\" : [\r\n        \"rain\",\r\n        \"temperature\"\r\n   ]\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/image-gallery/api/add.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"image-gallery",
+						"api",
+						"add.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 188,\r\n    \"name\" : \"Jelly fish Photo\",\r\n    \"url\" : \"http://www.pixworld.com/i/46443\",\r\n    \"size\" : 3043345,\r\n    \"width\" : 2900,\r\n    \"height\" : 600,\r\n    \"tags\" : [\r\n        \"fish\",\r\n        \"aquatic\",\r\n        \"ocean\"\r\n    ]\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/image-gallery/api/update.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"image-gallery",
+						"api",
+						"update.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/image-gallery/api/delete.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"image-gallery",
+						"api",
+						"delete.php"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/image-gallery/api/get.php?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"image-gallery",
+						"api",
+						"get.php"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-list",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/image-gallery/api/get-list.php",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"image-gallery",
+						"api",
+						"get-list.php"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
